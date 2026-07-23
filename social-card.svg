@@ -16,10 +16,10 @@
     <path d="M56 4v23H34"/>
     <path d="M27 43h32M43 27v32"/>
   </g>
-  <text x="175" y="116" fill="#edf8f2" font-family="Inter,Segoe UI,sans-serif" font-size="42" font-weight="750">AutoCache</text>
-  <text x="177" y="150" fill="#a7bdb3" font-family="Inter,Segoe UI,sans-serif" font-size="18" font-weight="700" letter-spacing="5">CONTINUITY</text>
+  <text x="175" y="116" fill="#edf8f2" font-family="Inter,Segoe UI,sans-serif" font-size="42" font-weight="750">Autonomous</text>
+  <text x="177" y="150" fill="#a7bdb3" font-family="Inter,Segoe UI,sans-serif" font-size="18" font-weight="700" letter-spacing="5">BY AUTOCACHE</text>
   <text x="78" y="335" fill="#edf8f2" font-family="Inter,Segoe UI,sans-serif" font-size="78" font-weight="780" letter-spacing="-4">Your AI starts where</text>
   <text x="78" y="423" fill="#edf8f2" font-family="Inter,Segoe UI,sans-serif" font-size="78" font-weight="780" letter-spacing="-4">you left off.</text>
-  <text x="82" y="505" fill="#a7bdb3" font-family="Inter,Segoe UI,sans-serif" font-size="27">Persistent, governed memory across models, agents, and sessions.</text>
+  <text x="82" y="505" fill="#a7bdb3" font-family="Inter,Segoe UI,sans-serif" font-size="27">Downloadable, local-first memory across models, agents, and sessions.</text>
   <rect x="82" y="548" width="182" height="4" rx="2" fill="#6ff0b5"/>
 </svg>
