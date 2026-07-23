@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(900 120) rotate(125) scale(620 480)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#35d897" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#07110f" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#a8e0c7" stroke-opacity=".06"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#07110f"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g transform="translate(78 72)" fill="none" stroke="#6ff0b5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M56 18a38 38 0 1 0 7 40"/>
+    <path d="M56 4v23H34"/>
+    <path d="M27 43h32M43 27v32"/>
+  </g>
+  <text x="175" y="116" fill="#edf8f2" font-family="Inter,Segoe UI,sans-serif" font-size="42" font-weight="750">AutoCache</text>
+  <text x="177" y="150" fill="#a7bdb3" font-family="Inter,Segoe UI,sans-serif" font-size="18" font-weight="700" letter-spacing="5">CONTINUITY</text>
+  <text x="78" y="335" fill="#edf8f2" font-family="Inter,Segoe UI,sans-serif" font-size="78" font-weight="780" letter-spacing="-4">Your AI starts where</text>
+  <text x="78" y="423" fill="#edf8f2" font-family="Inter,Segoe UI,sans-serif" font-size="78" font-weight="780" letter-spacing="-4">you left off.</text>
+  <text x="82" y="505" fill="#a7bdb3" font-family="Inter,Segoe UI,sans-serif" font-size="27">Persistent, governed memory across models, agents, and sessions.</text>
+  <rect x="82" y="548" width="182" height="4" rx="2" fill="#6ff0b5"/>
+</svg>
