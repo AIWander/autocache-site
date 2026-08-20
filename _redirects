@@ -1,0 +1,9 @@
+# Repo housekeeping files live at the root of this repo, and Pages deploys the
+# root, so they would otherwise be served on the marketing domain. They belong on
+# GitHub, not on autocache.ai.
+#
+# Paths only - no scheme or host in the source column. A rule written as
+# `https://www.autocache.ai/* ...` is what got removed in 72a24fc as invalid.
+/README.md   /404.html   404
+/LICENSE     /404.html   404
+/.gitattributes  /404.html  404
