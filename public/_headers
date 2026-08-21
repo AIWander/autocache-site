@@ -1,18 +1,47 @@
+# Cache policy is DEFAULT-SAFE, then explicitly widened.
+#
+# The /* block sets a revalidate-always default, so any file added to public/
+# later is correct without anyone remembering to add a rule for it. Long-lived
+# caching is opt-in per path below, which is the direction that fails safely:
+# forgetting a rule costs a revalidation round-trip, not a week of stale content.
+#
+# This exists because of a real incident. Cloudflare Pages' own default for
+# non-HTML assets is `public, s-maxage=604800` with NO revalidation - a seven-day
+# pin. On 2026-08-20 LICENSE and README.md were briefly deployed, picked up that
+# default because nothing here matched them, and kept being served from edge cache
+# long after they were removed from the build. Neither a targeted URL purge nor
+# Purge Everything evicted them. HTML was unaffected the whole time precisely
+# because it carries must-revalidate.
+#
+# WHY EVERY OVERRIDE STARTS WITH `! Cache-Control`:
+# Pages does NOT let a specific rule beat a general one. Per Cloudflare's docs,
+# "if a header is applied twice in the _headers file, the values are joined with a
+# comma separator" - so /styles.css matching both blocks would emit
+#   Cache-Control: public, max-age=0, must-revalidate, public, max-age=3600, must-revalidate
+# with two conflicting max-age values, which caches resolve inconsistently. The
+# `! Header-Name` detach syntax drops the inherited value first. Any future
+# Cache-Control override in this file MUST detach before setting, or it will merge.
+
 /*
   Content-Security-Policy: default-src 'self'; base-uri 'self'; connect-src 'self'; font-src 'self'; form-action 'none'; frame-ancestors 'none'; img-src 'self' data:; object-src 'none'; script-src 'self'; style-src 'self'; upgrade-insecure-requests
   Permissions-Policy: camera=(), geolocation=(), microphone=(), payment=(), usb=()
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
+  Cache-Control: public, max-age=0, must-revalidate
 
 /styles.css
+  ! Cache-Control
   Cache-Control: public, max-age=3600, must-revalidate
 
 /script.js
+  ! Cache-Control
   Cache-Control: public, max-age=3600, must-revalidate
 
 /*.svg
+  ! Cache-Control
   Cache-Control: public, max-age=86400, must-revalidate
 
 /social-card.png
+  ! Cache-Control
   Cache-Control: public, max-age=86400, must-revalidate
