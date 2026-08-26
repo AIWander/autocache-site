@@ -1,0 +1,26 @@
+# Autonomous by AutoCache
+
+> Autonomous gives supported AI clients durable context across models, agents, and sessions. AutoCache packages the local engine, user-owned Volumes, portable skills, optional hooks, and receipt-backed upkeep into one product you can inspect.
+
+- Publisher: AIWander
+- Platform: Windows
+- Product shape: a downloadable local product, not a hosted memory service
+- Availability: private preview is open. Sales and automated downloads are not active yet.
+- Pricing: not published
+
+## Pages
+- [Home](https://autocache.ai/)
+- [Get started](https://autocache.ai/start.html)
+- [Support](https://autocache.ai/support.html)
+- [Privacy](https://autocache.ai/privacy.html)
+- [Terms](https://autocache.ai/terms.html)
+
+## Related AIWander products
+- [AI-Hands](https://aihands.ai) - Windows MCP server for browser, desktop, vision, and OCR. Portable binary available now.
+- [AI Programmer](https://aiprogrammer.ai) - Windows dev shell MCP server.
+- [AI Voice MCP](https://aivoicemcp.com) - voice control for MCP agents.
+
+## Notes
+- Runs locally. Volumes are user-owned and inspectable.
+- Static site, no trackers, no third-party origins.
+- Continue from evidence, not chat-history guesswork.
